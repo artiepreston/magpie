@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+  height: 95vh;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+p {
+  color: aliceblue;
+}
