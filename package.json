@@ -6,6 +6,7 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^1.0.4",
     "a-sync-waterfall": "^1.0.1",
     "acorn": "^8.14.1",
     "acorn-walk": "^8.3.4",
@@ -158,6 +159,8 @@
     "ws": "^8.18.1"
   },
   "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

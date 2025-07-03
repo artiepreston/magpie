@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Magpie Books</title>
+    <link rel="icon" href="/public/images/circle_logo.svg">
+    <link rel="stylesheet" href="/public/css/home.css">
+  </head>
+  <body>
+    <div id="banner">
+      {% include "partials/navigation.njk" %}
+      <div id="logo">
+        <img
+          src="/public/images/main_logo.svg"
+          alt="Magpie Books Logo"
+          height="100%"
+        />
+      </div>
+    </div>
+    <div id="full-page-logo">
+        <img
+          src="/public/images/main_logo.svg"
+          alt="Magpie Books Logo"
+          height="100%"
+        />
+    </div>
+    <div id="content">
+      {{ content | safe }}
+    </div>
+  </body>
+  {% include "partials/footer.njk" %}
+</html>
