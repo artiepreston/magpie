@@ -1,0 +1,36 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--magpie-blue);
+    align-items: center;
+    justify-content: space-between;
+  
+    #company-info {
+      margin-left: 2rem;
+    }
+  
+    #socials {
+      display: flex;
+      flex-direction: row;
+      margin-right: 2rem;
+  
+      .icon {
+        padding: 1rem;
+        a {
+          img {
+            height: 20px;
+            width: 100%;
+          }
+        }
+  
+        a:hover {
+          img {
+            fill: white;
+          }
+        }
+      }
+    }
+  }

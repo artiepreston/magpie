@@ -1,0 +1,247 @@
+/* variables */
+:root {
+  --magpie-blue: #0796dc;
+}
+
+/* base formatting */
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 10vh;
+}
+
+p {
+  color: black;
+}
+
+#content {
+  a {
+    padding: 3px;
+    position: relative;
+    border-bottom: 2px solid white;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--magpie-blue);
+    transition: transform 0.25s ease-out;
+    transform-origin: bottom left;
+  }
+
+  a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* links */
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link {
+  padding: 3px;
+  position: relative;
+  border-bottom: 2px solid white;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--magpie-blue);
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom left;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.active-nav-link {
+  padding: 3px;
+  position: relative;
+  border-bottom: 2px solid white;
+}
+
+.active-nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--magpie-blue);
+
+}
+
+/* buttons */
+button {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0px 25px 15px;
+  min-width: 150px;
+  box-sizing: border-box;
+  padding: 0;
+
+  span {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.3s;
+    color: var(--magpie-blue);
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  span::before,
+  span::after {
+    width: 0%;
+    height: 0%;
+    background: transparent;
+    opacity: 0;
+    z-index: 2;
+    transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s 0.35s;
+    position: absolute;
+    content: "";
+  }
+
+  span::before {
+    top: 0;
+    left: 0;
+    border-left: 2px solid var(--magpie-blue);
+    border-bottom: 2px solid var(--magpie-blue);
+  }
+
+  span::after {
+    top: 0;
+    right: 0;
+    border-right: 2px solid var(--magpie-blue);
+    border-bottom: 2px solid var(--magpie-blue);
+  }
+
+  span:hover {
+    color: var(--magpie-blue);
+  }
+
+  span:hover::before,
+  span:hover::after {
+    width: 50%;
+    height: 96%;
+    opacity: 1;
+    transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px !important;
+  }
+
+  a::after {
+    display: none;
+  }
+
+  a:hover::after {
+    display: none;
+  }
+}
+
+button::before,
+button::after {
+  width: 15%;
+  height: 2px;
+  background-color: var(--magpie-blue);
+  z-index: 2;
+  top: 0;
+  transition: width 0.2s 0.35s ease-out;
+  position: absolute;
+  content: "";
+}
+
+button::before {
+  right: 50%;
+}
+
+button::after {
+  left: 50%;
+}
+
+button:hover::before,
+button:hover::after {
+  width: 50%;
+  transition: width 0.2s ease-in;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--magpie-blue);
+  align-items: center;
+  justify-content: space-between;
+
+  #company-info {
+    margin-left: 2rem;
+  }
+
+  #socials {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+
+    .icon {
+      padding: 1rem;
+      a {
+        img {
+          height: 4rem;
+          width: 100%;
+        }
+        @media screen and (min-width: 800px){
+          img {
+            height: 2rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
