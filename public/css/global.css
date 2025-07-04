@@ -24,14 +24,26 @@ p {
   color: black;
 }
 
-#content {
-  a {
-    padding: 3px;
-    position: relative;
-    border-bottom: 2px solid white;
-  }
+#content a {
+  padding: 3px;
+  position: relative;
+  border-bottom: 2px solid white;
+}
 
-  a::after {
+@media screen and (max-width: 800px) {
+  #content a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--magpie-blue);
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #content a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -43,8 +55,8 @@ p {
     transition: transform 0.25s ease-out;
     transform-origin: bottom left;
   }
-
-  a:hover::after {
+  
+  #content a:hover::after {
     transform: scaleX(1);
   }
 }
@@ -209,6 +221,36 @@ button:hover::after {
   transition: width 0.2s ease-in;
 }
 
+@media screen and (max-width: 800px) {
+  footer #company-info {
+    margin-left: 1rem;
+  }
+
+  footer #socials .icon a img {
+    height: 4rem;
+    width: 100%;
+  }
+
+  footer #socials .icon {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  footer #company-info {
+    margin-left: 2rem;
+  }
+
+  footer #socials .icon a img {
+    height: 2rem;
+    width: 100%;
+  }
+
+  footer #socials .icon {
+    padding: 1rem;
+  }
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -218,30 +260,10 @@ footer {
   background-color: var(--magpie-blue);
   align-items: center;
   justify-content: space-between;
+}
 
-  #company-info {
-    margin-left: 2rem;
-  }
-
-  #socials {
-    display: flex;
-    flex-direction: row;
-    margin-right: 2rem;
-
-    .icon {
-      padding: 1rem;
-      a {
-        img {
-          height: 4rem;
-          width: 100%;
-        }
-        @media screen and (min-width: 800px){
-          img {
-            height: 2rem;
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
+footer #socials {
+  display: flex;
+  flex-direction: row;
+  margin-right: 2rem;
 }

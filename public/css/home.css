@@ -1,16 +1,45 @@
 @import url("global.css");
 
+
+@media screen and (max-width: 800px) {
+  #full-page-logo {
+    margin: 3rem 1rem;
+    width: 80%;
+  }
+
+  #content {
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px solid var(--magpie-blue);
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #full-page-logo {
+    margin: 2rem;
+    width: 70%;
+  }
+
+  #banner nav {
+    align-self: flex-end;
+    margin-right: 1rem;
+  }
+
+  #content {
+    display: none;
+  }
+}
+
 #full-page-logo {
   flex-grow: 1;
-  margin: 2rem;
-  width: 70%;
   height: 70%;
+}
 
-  img {
+#full-page-logo img {
     width: 100%;
     height: 100%;
   }
-}
+
 
 #banner {
   width: 100%;
@@ -20,26 +49,21 @@
   align-items: center;
   margin: 1rem;
   flex-grow: 1;
+}
 
-  #logo {
-    display: none;
-  }
+#banner #logo {
+  display: none;
+}
 
-  nav {
-    align-self: flex-end;
-    margin-right: 1rem;
+#banner nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+}
 
-    ul {
-      list-style-type: none;
-      margin: 0px;
-      padding: 0px;
-      text-transform: uppercase;
-      display: flex;
-      flex-direction: row;
-
-      li {
-        margin: 0rem 0.5rem;
-      }
-    }
-  }
+#banner nav ul li {
+  margin: 0rem 0.5rem;
 }
