@@ -8,8 +8,6 @@
   }
 
   #content {
-    margin: 2rem;
-    padding: 1rem;
     border: 2px solid var(--magpie-blue);
   }
 }
@@ -17,16 +15,12 @@
 @media screen and (min-width: 801px) {
   #full-page-logo {
     margin: 2rem;
-    width: 70%;
+    width: 50%;
   }
 
   #banner nav {
     align-self: flex-end;
     margin-right: 1rem;
-  }
-
-  #content {
-    display: none;
   }
 }
 
@@ -38,6 +32,12 @@
 #full-page-logo img {
     width: 100%;
     height: 100%;
+  }
+
+#content {
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
   }
 
 
