@@ -8,4 +8,4 @@ eleventyNavigation:
 
 Launching Sunday 22nd March
 
-Find us on Portobello prom, from 11am - 4pm
+Find us on Portobello prom from 11am - 4pm
