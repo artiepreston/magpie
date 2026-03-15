@@ -4,9 +4,9 @@
     <title>Magpie Books</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/public/images/circle_logo.svg">
-    <link rel="stylesheet" href="/public/css/home.css">
+    <link rel="stylesheet" href="/public/css/main.css">
   </head>
-  <body>
+  <body class="page--contact">
     <div id="banner">
   <a href="/">
     <div id="logo">
@@ -28,8 +28,8 @@
   <button id="close-nav" aria-label="Close navigation">&#x2715;</button>
   
   <ul>
-      <li class="active-nav-link">
-        <a  href="/">Home</a>
+      <li>
+        <a class="link"  href="/">Home</a>
       </li>
       <li>
         <a class="link"  href="/donations/">Donate</a>
@@ -40,8 +40,8 @@
       <li>
         <a class="link"  href="/about/">About</a>
       </li>
-      <li>
-        <a class="link"  href="/contact/">Contact</a>
+      <li class="active-nav-link">
+        <a  href="/contact/">Contact</a>
       </li>
   </ul>
 </nav>
@@ -72,21 +72,32 @@
   closeBtn.addEventListener('click', closeNav);
   overlay.addEventListener('click', closeNav);
 </script>
-    <div id="full-page-logo">
-        <img
-          src="/public/images/main_logo.svg"
-          alt="Magpie Books Logo"
-          height="100%"
-        />
-    </div>
-    <div id="content">
-      <div id="text">
-        <h3>Portobello's pay what you can book stall</h3>
-<p>Launching Sunday 22nd March</p>
-<p>Find us on Portobello prom from 11am - 4pm</p>
+    <main>
+      <div id="content">
+        <h1>Find Us</h1>
+<p>We are open from 10-5 every Sunday. Find us on Portobello Prom, at the end of Pipe Lane.</p>
+<div id="location">
+  <img
+    src="/public/images/location.png"
+    alt="Magpie Books Logo"
+    height="100%"
+  />
+</div>
+<h1>Contact Us</h1>
+<p>Give us a message on <a href="https://www.instagram.com/magpiebooksedi/">instagram</a> or send us an email at <a href="magpiebooksedi@gmail.com">	magpiebooksedi@gmail.com</a>.</p>
+<h1>Request a book</h1>
+<p>If there's something you're looking for and you're willing to wait, add it to our book request list. If we happen to come across a copy we'll send you a message and, once you confirm you still want it, you can come and pick it up!</p>
+<p>For this service, we ask for a minimum donation of £1 or 30% of the book’s recommended donation, whichever is higher. (If you want to read more about our pay what you can pricing, check out our <a href="/about">about page</a>)</p>
+<div class="button-container">
+  <button>
+    <a href="https://forms.gle/hXwreLmZdT8goejy7">
+      <span>Request A Book</span>
+    </a>
+  </button>
+</div>
 
       </div>
-    </div>
+    </main>
   </body>
   <footer>
   <div id="company-info">

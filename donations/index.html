@@ -8,40 +8,90 @@
   </head>
   <body class="page--donations">
     <div id="banner">
+  <a href="/">
     <div id="logo">
-        <img
-          src="/public/images/main_logo.svg"
-          alt="Magpie Books Logo"
-          height="100%"
-        />
+      <img
+        src="/public/images/main_logo.svg"
+        alt="Magpie Books Logo"
+        height="100%"
+      />
     </div>
-    <nav>
+  </a>
+  <button id="hamburger" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+
+<nav id="side-panel">
+  <button id="close-nav" aria-label="Close navigation">&#x2715;</button>
   
   <ul>
       <li>
         <a class="link"  href="/">Home</a>
       </li>
+      <li class="active-nav-link">
+        <a  href="/donations/">Donate</a>
+      </li>
+      <li>
+        <a class="link"  href="/stock/">Our Stock</a>
+      </li>
       <li>
         <a class="link"  href="/about/">About</a>
       </li>
       <li>
-        <a class="link"  href="/book-request/">Request a book</a>
-      </li>
-      <li class="active-nav-link">
-        <a  href="/donations/">Donate</a>
+        <a class="link"  href="/contact/">Contact</a>
       </li>
   </ul>
 </nav>
-</div>
-    <div id="content">
-      <h1>Give us your books</h1>
-<p>We are always accepting donations!</p>
-<p>We take: fiction, non-fiction, old books, new books, good books, bad books, childrens’ books and adults’ books. The more the merrier!</p>
-<p>If you think we’re joking, we’re not. We like to shelf and display books that might be harder to find in traditional second hand shops, such as novels or non-fiction from marginalised authors.</p>
-<p>But we are not above selling the classics! We can make sure your favourite novel finds a new home, or dispose of your problematic pile through arts and crafts. We truly let nothing go to waste.</p>
-<p>While we wait for our street trader license to be approved, we can come pick up your donations (within reason)! Find out how to contact us through our <a href="/about">about page</a>.</p>
 
-    </div>
+<div id="nav-overlay"></div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const sidePanel = document.getElementById('side-panel');
+  const overlay   = document.getElementById('nav-overlay');
+  const closeBtn  = document.getElementById('close-nav');
+
+  function openNav() {
+    sidePanel.classList.add('open');
+    overlay.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeNav() {
+    sidePanel.classList.remove('open');
+    overlay.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', openNav);
+  closeBtn.addEventListener('click', closeNav);
+  overlay.addEventListener('click', closeNav);
+</script>
+    <main>
+      <div id="content">
+        <h1>Donate</h1>
+<p>If you don't have any need for a book right now, or perhapse you like what we do but can't make it to our stall then we're always open to recieving monetary donations to help us keep opening.</p>
+<div class="button-container">
+  <button>
+    <a href="https://donate.stripe.com/cNi7sK0Akcj98XqcImf7i00">
+      <span>Donate now</span>
+    </a>
+  </button>
+</div>
+<p>And if you don't have any spare change, then sharing our socials is always helpful!</p>
+<h1>Give us your books</h1>
+<p>We are always accepting donations of books!</p>
+<p>We take: fiction, non-fiction, old books, new books, good books, bad books, childrens’ books and adults’ books. The more the merrier!</p>
+<p>We like to shelf and display books that might be harder to find in traditional second hand shops, such as novels or non-fiction from marginalised authors. But, honestly we're open to all types of books and can make sure your favourite novel finds a new home, or dispose of your problematic pile through arts and crafts. We truly let nothing go to waste.</p>
+<p>Find out how to find us to drop off your donations on our <a href="/contact">contact page</a>.</p>
+
+      </div>
+    </main>
   </body>
   <footer>
   <div id="company-info">
