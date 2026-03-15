@@ -108,16 +108,16 @@ export default async function () {
     const cacheKey = `${book.title}__${book.author}`;
     if (!(cacheKey in cache)) {
       console.log(`Fetching cover for: ${book.title}`);
-      // const cover = await fetchCover(book.isbn, book.title, book.author);
+      const cover = await fetchCover(book.isbn, book.title, book.author);
 
-      // if (cover === 'RATE_LIMITED') {
-      //   book.cover = null;
-      //   continue;
-      // }
+      if (cover === 'RATE_LIMITED') {
+        book.cover = null;
+        continue;
+      }
 
-      // cache[cacheKey] = cover;
-      // await sleep(1500);
-      // saveCache(cache);
+      cache[cacheKey] = cover;
+      await sleep(1500);
+      saveCache(cache);
     }
     book.cover = cache[cacheKey];
   }
