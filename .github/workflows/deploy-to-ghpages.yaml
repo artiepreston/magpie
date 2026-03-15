@@ -3,6 +3,8 @@ name: Build and Deploy
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 0 * * *'  # every night at midnight
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -26,8 +28,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Restore covers cache
+        uses: actions/cache@v3
+        with:
+          path: .covers-cache.json
+          key: covers-cache
+
       - name: Build
         run: npm run build
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          SHEETS_ID: ${{ secrets.SHEETS_ID }}
+
+      - name: Save covers cache
+        uses: actions/cache/save@v3
+        with:
+          path: .covers-cache.json
+          key: covers-cache
 
       - name: Deploy to deploy branch
         uses: peaceiris/actions-gh-pages@v4

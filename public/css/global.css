@@ -17,11 +17,25 @@ body {
   justify-self: center;
   align-items: center;
   margin: 0;
-  margin-bottom: 10vh;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    align-items: stretch;
+  }
+}
+
+main {
+  flex: 1;
 }
 
 p {
   color: black;
+}
+
+img {
+  max-width: 100%;
 }
 
 #content a {
@@ -251,9 +265,13 @@ button:hover::after {
   }
 }
 
+h1 {
+  color: var(--magpie-blue);
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
+  position: sticky;
+  /* bottom: 0; */
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -267,3 +285,4 @@ footer #socials {
   flex-direction: row;
   margin-right: 2rem;
 }
+

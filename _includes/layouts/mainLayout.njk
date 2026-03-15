@@ -8,9 +8,11 @@
   </head>
   <body class="page--{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
     {% include "partials/banner.njk" %}
-    <div id="content">
-      {{ content | safe }}
-    </div>
+    <main>
+      <div id="content">
+        {{ content | safe }}
+      </div>
+    </main>
   </body>
   {% include "partials/footer.njk" %}
 </html>

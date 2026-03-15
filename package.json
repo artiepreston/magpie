@@ -173,5 +173,8 @@
   "bugs": {
     "url": "https://github.com/artiepreston/magpie/issues"
   },
-  "homepage": "https://github.com/artiepreston/magpie#readme"
+  "homepage": "https://github.com/artiepreston/magpie#readme",
+  "devDependencies": {
+    "dotenv": "^17.3.1"
+  }
 }

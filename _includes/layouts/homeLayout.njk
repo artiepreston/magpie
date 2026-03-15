@@ -7,16 +7,7 @@
     <link rel="stylesheet" href="/public/css/home.css">
   </head>
   <body>
-    <div id="banner">
-      {% include "partials/navigation.njk" %}
-      <div id="logo">
-        <img
-          src="/public/images/main_logo.svg"
-          alt="Magpie Books Logo"
-          height="100%"
-        />
-      </div>
-    </div>
+    {% include "partials/banner.njk" %}
     <div id="full-page-logo">
         <img
           src="/public/images/main_logo.svg"
@@ -25,7 +16,9 @@
         />
     </div>
     <div id="content">
-      {{ content | safe }}
+      <div id="text">
+        {{ content | safe }}
+      </div>
     </div>
   </body>
   {% include "partials/footer.njk" %}

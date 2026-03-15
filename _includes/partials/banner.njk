@@ -1,10 +1,55 @@
 <div id="banner">
+  <a href="/">
     <div id="logo">
-        <img
-          src="/public/images/main_logo.svg"
-          alt="Magpie Books Logo"
-          height="100%"
-        />
+      <img
+        src="/public/images/main_logo.svg"
+        alt="Magpie Books Logo"
+        height="100%"
+      />
     </div>
-    {% include "./navigation.njk" %}
+  </a>
+  <button id="hamburger" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </div>
+
+<nav id="side-panel">
+  <button id="close-nav" aria-label="Close navigation">&#x2715;</button>
+  {% set navPages = collections.all | eleventyNavigation %}
+  <ul>
+    {%- for entry in navPages %}
+      <li{% if entry.url == page.url %} class="active-nav-link"{% endif %}>
+        <a {% if entry.url != page.url %}class="link" {% endif %} href="{{ entry.url }}">{{ entry.title }}</a>
+      </li>
+    {%- endfor %}
+  </ul>
+</nav>
+
+<div id="nav-overlay"></div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const sidePanel = document.getElementById('side-panel');
+  const overlay   = document.getElementById('nav-overlay');
+  const closeBtn  = document.getElementById('close-nav');
+
+  function openNav() {
+    sidePanel.classList.add('open');
+    overlay.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeNav() {
+    sidePanel.classList.remove('open');
+    overlay.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', openNav);
+  closeBtn.addEventListener('click', closeNav);
+  overlay.addEventListener('click', closeNav);
+</script>

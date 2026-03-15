@@ -1,4 +1,11 @@
-<nav>
+<button id="hamburger" aria-label="Open navigation" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<nav id="side-panel">
+  <button id="close-nav" aria-label="Close navigation">&#x2715;</button>
   {% set navPages = collections.all | eleventyNavigation %}
   <ul>
     {%- for entry in navPages %}
@@ -8,3 +15,5 @@
     {%- endfor %}
   </ul>
 </nav>
+
+<div id="nav-overlay"></div>

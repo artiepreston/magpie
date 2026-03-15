@@ -1,0 +1,173 @@
+/* Hamburger button */
+#hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  min-width: unset;
+  box-sizing: border-box;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  z-index: 1100;
+}
+
+#hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--magpie-blue);
+  border-radius: 2px;
+  transition: 0.3s;
+  /* override the button span styles from global.css */
+  position: static;
+  font-size: unset;
+  font-weight: unset;
+  letter-spacing: unset;
+  text-transform: unset;
+  padding: 0;
+  color: unset;
+  background-color: var(--magpie-blue);
+}
+
+/* Side panel */
+#side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 70vw;
+  max-width: 300px;
+  background: white;
+  box-shadow: -4px 0 16px rgba(0,0,0,0.15);
+  z-index: 2000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+#side-panel.open {
+  transform: translateX(0);
+}
+
+#side-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-transform: uppercase;
+}
+
+#side-panel ul li a {
+  color: black;
+  font-size: 1.1rem;
+}
+
+#side-panel ul li.active-nav-link a {
+  color: var(--magpie-blue);
+}
+
+#close-nav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--magpie-blue);
+  min-width: unset;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+/* Overlay */
+#nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1500;
+}
+
+#nav-overlay.open {
+  display: block;
+}
+
+/* Mobile overrides */
+@media screen and (max-width: 800px) {
+      #hamburger {
+    display: flex;
+  }
+
+  #banner nav ul {
+    display: none; /* hide the inline nav on mobile */
+  }
+
+  #banner {
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 1rem 1rem;
+    flex-direction: row;       /* logo left, hamburger right */
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #banner #logo {
+    height: 4rem;
+    order: unset;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #hamburger {
+    display: none;
+  }
+
+  #close-nav {
+    display: none;
+  }
+
+  #side-panel {
+    transform: none;
+    width: auto;
+    height: auto;
+    max-width: unset;
+    box-shadow: none;
+    padding: 0;
+    background: transparent;
+    transition: none;
+    margin-right: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1rem;
+  }
+
+  #side-panel ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 0;
+  }
+
+  #side-panel ul li {
+    margin: 0 0.5rem;
+  }
+}
