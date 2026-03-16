@@ -149,7 +149,7 @@
     text-transform: uppercase;
     top: 0;
     left: 0;
-    color: var(--magpie-blue);
+    /* color: var(--magpie-blue); */
     box-sizing: border-box;
     margin: 0;
 }

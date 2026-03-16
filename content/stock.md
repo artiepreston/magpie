@@ -44,7 +44,7 @@ Please note that we can't guarentee the cover shown is the exact same as the one
       <div class="book-card">
         ${book.cover
           ? `<img src="${book.cover}" alt="Cover of ${book.title}" />`
-          : `<div class="no-cover">No image available</div>`
+          : `<img src="/public/images/no_img.png"/>`
         }
         <div class="book-card-body">
           <h3>${book.title}</h3>

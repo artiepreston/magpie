@@ -9,17 +9,100 @@
   <body>
     {% include "partials/banner.njk" %}
     <div id="full-page-logo">
-        <img
+      <img
           src="/public/images/main_logo.svg"
           alt="Magpie Books Logo"
           height="100%"
-        />
+      />
     </div>
     <div id="content">
       <div id="text">
         {{ content | safe }}
       </div>
+      <div id="browse-books">
+        <div id="browse-books-header">
+          <h1>Browse our books</h1>
+          <button id="see-more">
+            <a href="/stock">
+              <span>See more</span>
+            </a>
+          </button>
+        </div>
+        <div id="book-grid"></div>
+        <button id="see-more-mobile">
+          <a href="/stock">
+            <span>See more</span>
+          </a>
+        </button>
+      </div>
+      <div class="call-to-a-container">
+        <div class="action">
+          <div class="img-container">
+            <img 
+              src="/public/images/book_shelf.jpg"
+              alt="bass rock book"
+              height="100%"
+            />
+          </div>
+          <div class="callout">
+            <p>
+              Help us fund the stall and our vision 
+              of affordable books for all
+            </p>
+          </div>
+          <button>
+            <a href="https://donate.stripe.com/cNi7sK0Akcj98XqcImf7i00">
+              <span>Donate now</span>
+            </a>
+          </button>
+        </div>
+        <div class="action">
+          <div class="img-container">
+            <img 
+              src="/public/images/open_book.jpg"
+              alt="bass rock book"
+              height="100%"
+            />
+          </div>
+          <div class="callout">
+            <p>
+              We operate on a donation based,
+              pay-what-you-can model
+            </p>
+          </div>
+          <button>
+            <a href="/about">
+              <span>Find out how we work</span>
+            </a>
+          </button>
+        </div>
+      </div>
     </div>
   </body>
   {% include "partials/footer.njk" %}
+
+  <script>
+  const books = {{ books | dump | safe }};
+
+  const grid = document.getElementById('book-grid');
+
+  function render() {
+    const page = books.slice(0, 5);
+
+    grid.innerHTML = page.map(book => `
+      <div class="book-card">
+        ${book.cover
+          ? `<img src="${book.cover}" alt="Cover of ${book.title}" />`
+          : `<div class="no-cover">No image available</div>`
+        }
+        <div class="book-card-body">
+          <h3>${book.title}</h3>
+          <p class="author">${book.author}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  render();
+</script>
 </html>
