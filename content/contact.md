@@ -21,7 +21,7 @@ Give us a message on [instagram](https://www.instagram.com/magpiebooksedi/) or s
 
 # Request a book
 
-If there's something you're looking for and you're willing to wait, add it to our book request list. If we happen to come across a copy we'll send you a message and, once you confirm you still want it, you can come and pick it up!
+If there's something you're looking for and you're willing to wait, add it to our book request list. If we happen to come across a copy we'll send you a message and you can come and pick it up!
 
 For this service, we ask for a minimum donation of £1 or 30% of the book’s recommended donation, whichever is higher. (If you want to read more about our pay what you can pricing, check out our [about page](/about))
 

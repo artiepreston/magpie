@@ -5,7 +5,7 @@ eleventyNavigation:
   order: 2
 ---
 # Donate
-If you don't have any need for a book right now, or perhapse you like what we do but can't make it to our stall then we're always open to recieving monetary donations to help us keep opening.
+If you don't have any need for a book right now, or perhapse you like what we do but can't make it to our stall, then we're always open to recieving monetary donations to help us keep opening.
 <div class="button-container">
   <button>
     <a href="https://donate.stripe.com/cNi7sK0Akcj98XqcImf7i00">
@@ -14,7 +14,7 @@ If you don't have any need for a book right now, or perhapse you like what we do
   </button>
 </div>
 
-And if you don't have any spare change, then sharing our socials is always helpful!
+And if you don't have any spare change then sharing our socials is always helpful!
 
 # Give us your books
 

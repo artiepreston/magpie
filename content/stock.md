@@ -7,9 +7,11 @@ eleventyNavigation:
 ---
 # Our Stock
 
-Below is a list of the books we currently have in stock. Please give us an email or reach out on instagram if you have any questions about our stock, or want us to put a book aside for you.
+Below is a list of the books we currently have in stock. Feel free to give us an email or reach out on instagram if you have any questions, or want us to put a book aside for you.
 
-Please note that we can't guarentee the cover shown is the exact same as the one we have in our stock - if you're looking for a particular edition then please reach out!
+Please note that we can't guarentee the cover shown is the exact same as the one we have in our stock - if you're looking for a particular edition then reach out!
+
+All books are secondhand.
 
 <div id="search-bar">
   <input type="text" id="search" placeholder="Search by title or author..." />

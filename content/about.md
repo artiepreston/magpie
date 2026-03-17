@@ -9,9 +9,9 @@ eleventyNavigation:
 _Never too skint for books_
 
 ## Pay What You Can
-Magpie Books runs on a pay-what-you-can basis. We think literature is a universal right that shouldn’t be dependent on one’s income or ability to provide proof of residency. This is why we require no payment or membership. 
+Magpie Books is a secondhand book stall that runs on a pay-what-you-can basis. We think literature is a universal right that shouldn’t be dependent on one’s income or ability to provide proof of residency. This is why we require no payment or membership. 
 
-All books come with an optional recommended donation. We take pride in being transparent, so we come up with these prices by matching Amazon’s lowest price for each title, and take off 10% to seal the deal (30% if the book isn't in the best condition). 
+All books come with an optional recommended donation. We take pride in being transparent, so we come up with these prices by matching Amazon’s price for a used copy of each title, and then take off 10% to seal the deal (30% if the book isn't in the best condition). 
 
 All children books come with a recommended donation of £1.
 

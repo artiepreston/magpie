@@ -4,8 +4,8 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-### Portobello's pay what you can book stall 
+### Portobello's pay-what-you-can, used book stall 
 
-Launching Sunday 22nd March
+Launching Sunday 22nd March!
 
 Find us on Portobello prom from 11am - 4pm
