@@ -26,6 +26,7 @@
 
   #text {
     border: 2px solid var(--magpie-blue);
+    padding: 0 0.5rem;
   }
   
   .call-to-a-container {
