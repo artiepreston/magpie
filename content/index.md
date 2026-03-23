@@ -6,6 +6,4 @@ eleventyNavigation:
 ---
 ### Portobello's pay-what-you-can, used book stall 
 
-Launching Sunday 22nd March!
-
-Find us on Portobello prom from 11am - 4pm
+Find us on Portobello prom every Sunday from 10am - 5pm

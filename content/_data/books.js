@@ -82,12 +82,16 @@ export default async function () {
     title: row[1],
     author: row[2],
     condition: row[8],
+    sold: row[10],
     featured: row[16]
   }));
 
   const normalise = str => (str ?? "").trim().toLowerCase();
+  const not_sold = books.filter(book => {
+    return book.sold == "FALSE"
+  })
 
-  const unique = books.filter((book, index, self) =>
+  const unique = not_sold.filter((book, index, self) =>
     index === self.findIndex(b =>
       normalise(b.title) === normalise(book.title) &&
       normalise(b.author) === normalise(book.author) &&
